@@ -1,1 +1,2 @@
-# Kanban_Project
+# webpack-boilerplate
+Webpack Starting point.
