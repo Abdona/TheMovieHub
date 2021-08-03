@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <header class="f-header position-relative js-f-header">
+  <header class="f-header position-relative js-f-header margin-y-lg">
     <div class="f-header__mobile-content container max-width-lg">
       <a href="#0" class="f-header__logo">
         <svg width="104" height="30" viewBox="0 0 104 30">
@@ -66,7 +66,9 @@
     </div>
   </header>
 
-  <main id="moviesection">
+  <main class="container max-width-md">
+    <div id="moviesection1" class="grid gap-sm"></div>
+    <div id="moviesection2" class="grid gap-sm"></div>
   </main>
 
   <div class="modal modal--animate-scale flex flex-center bg-contrast-higher bg-opacity-90% padding-md js-modal"
@@ -89,13 +91,12 @@
       </header>
 
       <div class="padding-y-sm padding-x-md">
-        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Wonder_Woman_1984.png/220px-Wonder_Woman_1984.png" alt="" class="width-100%">
+        <img id="_m_fig">
         <div class="text-component">
           <div class="padding-top-xs text-center">
-            <h3>This Movie Title</h3>
+            <h3 id="_m_title"></h3>
           </div>
-          <p id="modal-description-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae culpa, inventore
-            alias ab atque similique quod ea reprehenderit.</p>
+          <p id="_m_description"></p>
         </div>
       </div>
     </div>
@@ -112,6 +113,7 @@
     </button>
   </div>
 
+  
   <script src="https://cdn-ec853.web.app/js/scripts.min.js"></script>
 </body>
 
