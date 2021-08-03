@@ -1,4 +1,7 @@
-import {getPopular,getPopulardetails,getPopularposter} from './API';
-movieRowone = document.getElementById('row1');
-movieRowtwo = document.getElementById('row2');
-movieList =
+import { getPopular } from './API';
+import creatHtml from './DomManipulation';
+
+(async () => {
+  const movielist = await getPopular(6);
+  creatHtml(movielist);
+})();
