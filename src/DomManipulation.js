@@ -1,6 +1,6 @@
 import { getPopularposter, getPopulardetails } from './API';
-import { it } from './item.js';
-import { grab, create } from './utills';
+import itemDetails from './item.js';
+import { grab } from './utills';
 
 export default function creatHtml(movielist) {
   movielist.forEach((movie) => {
