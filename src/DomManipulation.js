@@ -19,12 +19,12 @@ export default function creatHtml(movielist) {
       const movieposter = await getPopularposter(movie.imdb_id);
       if (movieRowone.querySelectorAll('div').length !== 3) {
         const divitem = document.createElement('div');
-        divitem.innerHTML = `<img src=${movieposter} alt=${movie.title}><br><button class="btn btn--primary"
+        divitem.innerHTML = `<img src=${movieposter} alt=${movie.title}><br><h6>${movie.title}</h6><br><button class="btn btn--primary"
           aria-controls="modal-name-1">Comment</button>`;
         movieRowone.appendChild(divitem);
       } else if (movieRowtwo.querySelectorAll('div').length !== 3) {
         const divitem = document.createElement('div');
-        divitem.innerHTML = `<img src=${movieposter} alt=${movie.title}><br><button class="btn btn--primary"
+        divitem.innerHTML = `<img src=${movieposter} alt=${movie.title}><br><h6>${movie.title}</h6><br><button class="btn btn--primary"
           aria-controls="modal-name-1">Comment</button>`;
         movieRowtwo.appendChild(divitem);
       }
