@@ -1,6 +1,4 @@
-const fetch = require('cross-fetch');
-
-const getPopular = async (movieNumber) => {
+export const getPopular = async (movieNumber) => {
   const resp = await fetch('https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-popular-movies&page=1&year=2020', {
     method: 'GET',
     headers: {
@@ -12,7 +10,7 @@ const getPopular = async (movieNumber) => {
   return respJson.movie_results.slice(0, movieNumber);
 };
 
-const getPopularposter = async (movieid) => {
+export const getPopularposter = async (movieid) => {
   const resp = await fetch(`https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-movies-images-by-imdb&imdb=${movieid}`, {
     method: 'GET',
     headers: {
@@ -24,8 +22,8 @@ const getPopularposter = async (movieid) => {
   return respJson.poster;
 };
 
-const getPopulardetails = async (movieNumber) => {
-  const resp = await fetch('https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-popular-movies&page=1&year=2020', {
+export const getPopulardetails = async (movieid) => {
+  const resp = await fetch(`https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-movie-details&imdb=${movieid}`, {
     method: 'GET',
     headers: {
       'x-rapidapi-key': '646b9d635fmsh5798a4d83b59a18p1a2a7djsn49980f17b348',
@@ -33,9 +31,5 @@ const getPopulardetails = async (movieNumber) => {
     },
   });
   const respJson = await resp.json();
-  return respJson.poster;
+  return respJson.description;
 };
-
-(async () => {
-  console.log(await getPopularposter('tt1375666'));
-})();
