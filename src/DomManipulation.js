@@ -2,6 +2,9 @@ import { getPopularposter } from './API';
 
 export default function creatHtml(movielist) {
   const moviesection = document.getElementById('moviesection');
+  moviesection.classList.add('flex');
+  moviesection.classList.add('flex-column');
+  moviesection.style.padding = '110px';
   moviesection.innerHTML = '';
   const movieRowone = document.createElement('div');
   movieRowone.setAttribute('id', 'row1');
@@ -27,6 +30,10 @@ export default function creatHtml(movielist) {
       }
     })();
   });
+  const Break1 = document.createElement('br');
+  const Break2 = document.createElement('br');
   moviesection.appendChild(movieRowone);
+  moviesection.appendChild(Break1);
+  moviesection.appendChild(Break2);
   moviesection.appendChild(movieRowtwo);
 }
