@@ -17,6 +17,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    clean: true,
   },
   module: {
     rules: [
@@ -24,6 +25,14 @@ module.exports = {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        use: 'file-loader',
+        type: 'asset/resource',
+      },
     ],
+  },
+  experiments: {
+    topLevelAwait: true,
   },
 };
