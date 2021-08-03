@@ -1,5 +1,5 @@
 import { getPopularposter, getPopulardetails } from './API';
-import { itemDetails } from './item';
+import { it } from './item.js';
 import { grab, create } from './utills';
 
 export default function creatHtml(movielist) {
@@ -14,9 +14,9 @@ export default function creatHtml(movielist) {
       img.src = movieposter;
       const comment = document.createElement('button');
       comment.className = 'btn btn--primary width-100%';
-      comment.addEventListener('click', () => { itemDetails(movie.title, details, movieposter) });
+      comment.addEventListener('click', () => { itemDetails(movie.title, details, movieposter); });
       container.append(img, comment);
-      grab('moviesection1').appendChild(container)
+      grab('moviesection1').appendChild(container);
     })();
   });
 }

@@ -11,5 +11,4 @@ function openModal(modal) {
 function create(e) {
   return document.createElement(e);
 }
-
-export { grab, create, openModal }
+export { grab, create, openModal };
