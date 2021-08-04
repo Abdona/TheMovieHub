@@ -20,26 +20,45 @@
 | ![screenshot](./src/Images/Footer.png) |
 | :------------: |
 
+
+## Installation
+
+- Clone the repository , use  `git clone git@github.com:Abdona/Kanban_Project.git` 
+- open terminal and change Directory, use `cd Kanban_project`
+- Install all Dependencies, use `npm install` or `npm i`
+
+## Usage
+
+### Development server
+- to run the Webapp you need to use `npm run start`
+
+You can now view the development server at `localhost:8080`.
+
 ## Built With
 
 - HTML
 - CSS
 - JavaScript
-- IMDB API
+- IMdb API
 - Webpack
 
-## Live Demo
+## Dependencies
 
-[Movie HuB]()
+### webpack
 
+- [`webpack`](https://github.com/webpack/webpack) - Module and asset bundler.
+- [`webpack-cli`](https://github.com/webpack/webpack-cli) - Command line interface for webpack
+- [`webpack-dev-server`](https://github.com/webpack/webpack-dev-server) - Development server for webpack
+  
+### Linters
 
-## Getting Started
+- [`eslint`](https://github.com/eslint/eslint) - Enforce styleguide across application
+- [`eslint-config-airbnb-base`](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) - Base styleguide to enforce rules
 
-1.CLone The Repository locally on your Computer.
+## Acknowledgments
 
-2.Open The Directory,where you cloned the Repository.
-
-3.open the "index.html" file.
+- Microverse
+- Leadeboard
 
 ## Author
 
@@ -60,9 +79,6 @@ Feel free to check the [issues page]().
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Inspiration
-Design idea by [Mathew Njuguna and Sam Achola on Behance](https://www.behance.net/mathewnjuguna)
 
 ## 📝 License
 
