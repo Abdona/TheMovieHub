@@ -28,6 +28,7 @@ export function creatHtml(movielist) {
       divitem.querySelector('i').addEventListener('click', async () => { await createMovielike(movie.imdb_id); await showlikes(movie.imdb_id); });
       divitem.append(detailButt, commentButt);
       moviesection.appendChild(divitem);
+      await showlikes(movie.imdb_id);
     })();
   });
 }
