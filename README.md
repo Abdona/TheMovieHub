@@ -23,8 +23,8 @@
 
 ## Installation
 
-- Clone the repository , use  `git clone git@github.com:Abdona/Kanban_Project.git` 
-- open terminal and change Directory, use `cd Kanban_project`
+- Clone the repository , use  `git@github.com:Abdona/TheMovieHub.git` 
+- open terminal and change Directory, use `cd TheMovieHub`
 - Install all Dependencies, use `npm install` or `npm i`
 
 ## Usage
