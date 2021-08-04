@@ -1,5 +1,5 @@
-import { getPopular } from './API';
-import { Count, creatHtml } from './DomManipulation';
+import { getPopular } from './API.js';
+import { Count, creatHtml } from './DomManipulation.js';
 
 (async () => {
   const movielist = await getPopular(6);
