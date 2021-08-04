@@ -28,7 +28,11 @@ export function creatHtml(movielist) {
   });
 }
 
-export function Count(movielist) {
+export function headerMoviecount(movieLength) {
   const spanTitle = document.getElementById('title');
-  spanTitle.innerText = `Movies (${movielist.length})`;
+  spanTitle.innerText = `Movies (${movieLength})`;
+}
+
+export function Count(movielist) {
+  return movielist.length;
 }
