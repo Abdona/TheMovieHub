@@ -1,15 +1,13 @@
-const fetch = require('cross-fetch');
+// export const createMovie = async () => {
+//   const resp = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/', {
+//     method: 'POST',
+//   });
+//   return resp.text();
+// };
 
-const createMovie = async () => {
-  const resp = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/', {
-    method: 'POST',
-  });
-  return resp.text();
-};
-
-const createMovielike = async (itemId) => {
+export const createMovielike = async (itemId) => {
   const data = JSON.stringify({ item_id: itemId });
-  const resp = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/{R28OTC179PUdUdjaPoCa/likes/', {
+  const resp = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/R28OTC179PUdUdjaPoCa/likes/', {
     method: 'POST',
     headers: {
       'Content-type': 'application/json; Charset=UTF-8',
@@ -19,15 +17,15 @@ const createMovielike = async (itemId) => {
   return resp.text();
 };
 
-const getMovielike = async () => {
-  const resp = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/{R28OTC179PUdUdjaPoCa/likes/', {
+export const getMovielike = async () => {
+  const resp = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/R28OTC179PUdUdjaPoCa/likes/', {
   });
   return resp.text();
 };
 
-const createMoviecomment = async (id, userName, userComment) => {
+export const createMoviecomment = async (id, userName, userComment) => {
   const data = JSON.stringify({ item_id: id, username: userName, comment: userComment });
-  const resp = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/{R28OTC179PUdUdjaPoCa/comments/', {
+  const resp = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/R28OTC179PUdUdjaPoCa/comments/', {
     method: 'POST',
     headers: {
       'Content-type': 'application/json; Charset=UTF-8',
@@ -37,11 +35,11 @@ const createMoviecomment = async (id, userName, userComment) => {
   return resp.text();
 };
 
-const getMoviecomment = async (itemId) => {
-  const resp = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/{R28OTC179PUdUdjaPoCa/comments/item_id=${itemId}`, {
+export const getMoviecomment = async (itemId) => {
+  const resp = await fetch(`https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/R28OTC179PUdUdjaPoCa/comments?item_id=${itemId}`, {
   });
   return resp.text();
 };
-(async () => {
-  console.log(await createMovie());
-})();
+// this function returns
+// [{"comment":"Das is wunderbar","creation_date":"2021-08-04","username":"abdulrahman"},
+// {"username":"abdulrahman","creation_date":"2021-08-04","comment":"Das is wunderbar"}]
