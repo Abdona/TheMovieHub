@@ -6,5 +6,3 @@ import { Count, creatHtml } from './DomManipulation.js';
   creatHtml(movielist);
   Count(movielist);
 })();
-
-// console.log([{ name: 'ahmed', age: '20' }, { name: 'mohamed', age: '25' }, { name: 'samah', age: '30' }].find((obj) => obj.name === 'ahmed'));
