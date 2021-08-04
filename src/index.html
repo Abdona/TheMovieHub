@@ -44,30 +44,20 @@
         <ul class="f-header__list">
           <li class="f-header__item">
             <a href="#0" class="f-header__link js-tab-focus" aria-current="page">
-              <span>Spaceships(6)</span>
-              <!-- <svg class="f-header__dropdown-icon icon" aria-hidden="true" viewBox="0 0 12 12">
-                <path d="M6,9l4-5H2Z" />
-              </svg> -->
+              <span id="title"></span>
             </a>
-
-            <ul class="f-header__dropdown">
-              <li><a href="#0" class="f-header__dropdown-link">Spaceship 1</a></li>
-              <li><a href="#0" class="f-header__dropdown-link">Spaceship 2</a></li>
-              <li><a href="#0" class="f-header__dropdown-link">Spaceship 3</a></li>
-              <li><a href="#0" class="f-header__dropdown-link">Spaceship 4</a></li>
-              <li><a href="#0" class="f-header__dropdown-link">Spaceship 5</a></li>
-              <li><a href="#0" class="f-header__dropdown-link">Spaceship 6</a></li>
+            <ul class="f-header__dropdown" id="moviedropmenu">
             </ul>
           </li>
-          <li class="f-header__item"><a href="#0" class="f-header__link">Planets</a></li>
-          <li class="f-header__item"><a href="#0" class="f-header__link">Races</a></li>
+          <li class="f-header__item"><a href="#0" class="f-header__link">Series</a></li>
+          <li class="f-header__item"><a href="#0" class="f-header__link">Top 20</a></li>
         </ul>
       </div>
     </div>
   </header>
 
   <main class="container max-width-md">
-    <div id="moviesection1" class="grid gap-sm"></div>
+    <div id="moviesection" class="grid gap-sm"></div>
   </main>
 
   <div class="modal modal--animate-scale flex flex-center bg-contrast-higher bg-opacity-90% padding-md js-modal"
@@ -90,12 +80,6 @@
       </header>
 
       <div class="padding-y-sm padding-x-md" id="popwindow">
-        <div class="text-component">
-          <div class="padding-top-xs text-center">
-            <h3 id="_m_title"></h3>
-          </div>
-          <p id="_m_description"></p>
-        </div>
       </div>
     </div>
 
