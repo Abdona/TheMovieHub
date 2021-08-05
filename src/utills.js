@@ -1,14 +1,10 @@
-function grab(e) {
-  return document.getElementById(e);
-}
+const grab = (e) => document.getElementById(e);
 
-function openModal(modal) {
+const openModal = (modal) => {
   const element = document.getElementsByClassName('js-modal')[modal];
   const event = new CustomEvent('openModal');
   element.dispatchEvent(event);
-}
+};
 
-function create(e) {
-  return document.createElement(e);
-}
+const create = (e) => document.createElement(e);
 export { grab, create, openModal };
