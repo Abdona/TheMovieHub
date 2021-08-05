@@ -9,13 +9,20 @@ export function creatHtml(movielist) {
     (async () => {
       const details = await getPopulardetails(movie.imdb_id);
       const movieposter = await getPopularposter(movie.imdb_id);
+
       const divitem = document.createElement('div');
       divitem.className = 'col-4';
+
       const dropMenuli = document.createElement('li');
       const detailButt = document.createElement('button');
+
       detailButt.className = 'btn btn--primary margin-right-md';
       detailButt.innerText = 'Details';
-      detailButt.addEventListener('click', () => { itemDetails(movie.title, details, movieposter); });
+
+      detailButt.addEventListener('click', () => {
+        itemDetails(movie.title, details, movieposter, movie.imdb_id); 
+      });
+
       const commentButt = document.createElement('button');
       commentButt.className = 'btn btn--primary';
       commentButt.innerText = 'Comment';
