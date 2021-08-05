@@ -23,7 +23,7 @@ export function creatHtml(movielist) {
       detailButt.innerText = 'Details';
 
       detailButt.addEventListener('click', () => {
-        itemDetails(movie.title, details, movieposter, movie.imdb_id); 
+        itemDetails(movie.title, details, movieposter, movie.imdb_id);
       });
 
       const commentButt = document.createElement('button');

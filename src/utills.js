@@ -5,9 +5,11 @@ function openModal(modal, callback) {
   const event = new CustomEvent('openModal');
   element.dispatchEvent(event);
 
-  element.addEventListener('modalIsClose', function (event) {callback()});
+  element.addEventListener('modalIsClose', () => { callback(); });
 }
 
 function create(e) {
   return document.createElement(e);
 }
+
+export { grab, openModal, create };

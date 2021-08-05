@@ -14,21 +14,22 @@ export default async function itemDetails(mTitle, mDescription, mFig, mId) {
 
   getMoviecomment(mId).then((data) => {
     const comments = JSON.parse(data);
-    const commentsSection = grab('_comments')
-    commentsSection.innerHTML = ''
-    grab('_comments_length').innerText = comments.length
+    const commentsSection = grab('_comments');
+    commentsSection.innerHTML = '';
+    grab('_comments_length').innerText = comments.length;
 
     comments.forEach((element) => {
-      const template = document.createElement('template')
+      const template = document.createElement('template');
       template.innerHTML = `<li>
         <span>${element.creation_date}</span>
         <span>${element.username}: </span>
         <span>${element.comment}</span>
-      </li>`
-      commentsSection.appendChild(template.content.firstChild)
+      </li>`;
+      commentsSection.appendChild(template.content.firstChild);
     });
-  })
+  });
 
+  // eslint-disable-next-line no-use-before-define
   document.getElementById('_btn_comment').addEventListener('click', myFunction);
 
   function removeHandler() {
@@ -37,34 +38,34 @@ export default async function itemDetails(mTitle, mDescription, mFig, mId) {
   }
 
   function myFunction(e) {
-    e.preventDefault()
-    const name = grab('_txt_name')
-    const comment = grab('_txt_comment')
+    e.preventDefault();
+    const name = grab('_txt_name');
+    const comment = grab('_txt_comment');
 
     createMoviecomment(mId, name.value, comment.value).then(() => {
       getMoviecomment(mId).then((data) => {
         name.value = '';
         comment.value = '';
-        
+
         const comments = JSON.parse(data);
-        const commentsSection = grab('_comments')
-        commentsSection.innerHTML = ''
-        grab('_comments_length').innerText = comments.length
+        const commentsSection = grab('_comments');
+        commentsSection.innerHTML = '';
+        grab('_comments_length').innerText = comments.length;
 
         comments.forEach((element) => {
-          const template = document.createElement('template')
+          const template = document.createElement('template');
           template.innerHTML = `<li>
             <span>${element.creation_date}</span>
             <span>${element.username}: </span>
             <span>${element.comment}</span>
-          </li>`
-          commentsSection.appendChild(template.content.firstChild)
+          </li>`;
+          commentsSection.appendChild(template.content.firstChild);
         });
-      })
-    })
+      });
+    });
   }
 
   openModal(0, () => {
-    grab('_btn_comment').removeEventListener('click', removeHandler())
+    grab('_btn_comment').removeEventListener('click', removeHandler());
   });
 }
