@@ -2,7 +2,8 @@
 
 # Moive Hub
 
-> loremIpsumloremIpsumloremIpsumloremIpsumloremIpsumloremIpsumloremIpsumloremIpsumloremIpsumloremIpsumloremIpsumloremIpsumloremIpsumloremIpsumloremIpsumloremIpsumloremIpsumloremIpsumloremIpsumloremIpsumloremIpsumloremIpsum
+> 
+The Movie Hub is a website which is based on the Imdb database. It uses Imdb API to fetch Movies with their images and description. With the use of the Involvement API to POST and GET the likes and comments, users can comment and like a certain movie.
 > 
 # Header
 

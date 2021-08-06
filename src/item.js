@@ -14,20 +14,21 @@ export default async function itemDetails(mTitle, mDescription, mFig, mId) {
 
   getMoviecomment(mId).then((data) => {
     const comments = JSON.parse(data);
-    const commentsSection = grab('_comments');
-    commentsSection.innerHTML = '';
+    if (comments.length !== undefined) {
+      const commentsSection = grab('_comments');
+      commentsSection.innerHTML = '';
+      grab('_comments_length').innerText = dspCommentsLength(comments);
 
-    grab('_comments_length').innerText = dspCommentsLength(comments);
-
-    comments.forEach((element) => {
-      const template = document.createElement('template');
-      template.innerHTML = `<li>
+      comments.forEach((element) => {
+        const template = document.createElement('template');
+        template.innerHTML = `<li>
         <span>${element.creation_date}</span>
         <span>${element.username}: </span>
         <span>${element.comment}</span>
       </li>`;
-      commentsSection.appendChild(template.content.firstChild);
-    });
+        commentsSection.appendChild(template.content.firstChild);
+      });
+    }
   });
 
   // eslint-disable-next-line no-use-before-define
