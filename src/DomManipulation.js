@@ -20,20 +20,17 @@ export function creatHtml(movielist) {
       const detailButt = document.createElement('button');
 
       detailButt.className = 'btn btn--primary margin-right-md';
-      detailButt.innerText = 'Details';
+      detailButt.innerText = 'Comments';
 
       detailButt.addEventListener('click', () => {
         itemDetails(movie.title, details, movieposter, movie.imdb_id);
       });
 
-      const commentButt = document.createElement('button');
-      commentButt.className = 'btn btn--primary';
-      commentButt.innerText = 'Comment';
       dropMenuli.innerHTML = `<li><a href="#0" class="f-header__dropdown-link">${movie.title}</a></li>`;
       headerDropmenu.appendChild(dropMenuli);
       divitem.innerHTML = `<img src=${movieposter} alt=${movie.title}><br><div class='clearfix'><h6 class='float-left'>${movie.title}</h6><i class='float-right'>${heartsvg}</i></div><div><p id=${movie.imdb_id}></p></div><br>`;
       divitem.querySelector('i').addEventListener('click', async () => { await createMovielike(movie.imdb_id); await showlikes(movie.imdb_id); });
-      divitem.append(detailButt, commentButt);
+      divitem.append(detailButt);
       moviesection.appendChild(divitem);
       await showlikes(movie.imdb_id);
     })();
