@@ -17,8 +17,6 @@ export default async function itemDetails(mTitle, mDescription, mFig, mId) {
     const commentsSection = grab('_comments');
     commentsSection.innerHTML = '';
 
-    console.log(comments);
-
     grab('_comments_length').innerText = dspCommentsLength(comments);
 
     comments.forEach((element) => {

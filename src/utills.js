@@ -14,4 +14,6 @@ function create(e) {
   return document.createElement(e);
 }
 
-export { grab, openModal, create, dspCommentsLength };
+export {
+  grab, openModal, create, dspCommentsLength
+};

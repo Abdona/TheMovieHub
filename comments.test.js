@@ -1,11 +1,11 @@
-const { dspCommentsLength } = require('./src/utills')
+const { dspCommentsLength } = require('./src/utills');
 
 const mockCommentsObj = [
   {
     comment: 'I did not like the ending of the movies, but overall its a good movie',
     creation_date: '2021-08-05',
-    username: 'Abdulrahman'
-  }
+    username: 'Abdulrahman',
+  },
 ];
 
 test('Should count comments', () => {
