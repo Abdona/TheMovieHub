@@ -8,8 +8,10 @@ function openModal(modal, callback) {
   element.addEventListener('modalIsClose', () => { callback(); });
 }
 
+const dspCommentsLength = (comments) => comments.length;
+
 function create(e) {
   return document.createElement(e);
 }
 
-export { grab, openModal, create };
+export { grab, openModal, create, dspCommentsLength };

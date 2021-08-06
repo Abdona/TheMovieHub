@@ -1,4 +1,4 @@
-import { grab, openModal } from './utills.js';
+import { grab, openModal, dspCommentsLength } from './utills.js';
 import { getMoviecomment, createMoviecomment } from './InvolvementAPI.js';
 
 export default async function itemDetails(mTitle, mDescription, mFig, mId) {
@@ -16,7 +16,10 @@ export default async function itemDetails(mTitle, mDescription, mFig, mId) {
     const comments = JSON.parse(data);
     const commentsSection = grab('_comments');
     commentsSection.innerHTML = '';
-    grab('_comments_length').innerText = comments.length;
+
+    console.log(comments);
+
+    grab('_comments_length').innerText = dspCommentsLength(comments);
 
     comments.forEach((element) => {
       const template = document.createElement('template');
@@ -50,6 +53,7 @@ export default async function itemDetails(mTitle, mDescription, mFig, mId) {
         const comments = JSON.parse(data);
         const commentsSection = grab('_comments');
         commentsSection.innerHTML = '';
+
         grab('_comments_length').innerText = comments.length;
 
         comments.forEach((element) => {
