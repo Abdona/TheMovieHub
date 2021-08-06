@@ -15,5 +15,5 @@ function create(e) {
 }
 
 export {
-  grab, openModal, create, dspCommentsLength
+  grab, openModal, create, dspCommentsLength,
 };

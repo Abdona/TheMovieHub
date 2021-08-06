@@ -1,4 +1,4 @@
-const { dspCommentsLength } = require('./src/utills');
+const { dspCommentsLength } = require('./src/utills.js');
 
 const mockCommentsObj = [
   {
